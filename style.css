@@ -1,12 +1,101 @@
+:root {
+	/* Spacing */
+	--SP-1: 8px;
+	--SP-2: 16px;
+	--SP-3: 24px;
+	--SP-4: 32px;
+	--SP-5: 48px;
+	--SP-6: 64px;
+	--SP-7: 96px;
+	--SP-8: 128px;
+
+	/* Font Sizes */
+	--FS-1: 1rem;
+	--FS-2: 1.25rem;
+	--FS-3: 1.5rem;
+	--FS-4: 2rem;
+
+	/* Colours */
+	--C-Primary: hsl(160deg, 100%, 30%);
+	--C-Secondary-lighter: hsl(45deg, 100%, 50%);
+	--C-Secondary-darker: hsl(45deg, 100%, 40%);
+	--C-Grey-100: hsl(0deg, 0%, 100%);
+	--C-Grey-200: hsl(0deg, 0%, 60%);
+	--C-Grey-300: hsl(0deg, 0%, 40%);
+	--C-Grey-400: hsl(0deg, 0%, 30%);
+	--C-Grey-500: hsl(0deg, 0%, 10%);
+	--C-Grey-600: hsl(0deg, 0%, 0%);
+}
+
 * {
-  box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+	box-sizing: border-box;
+	font-family: 'Lato', sans-serif;
 }
 
 html,
 body {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
+	font-size: var(--FS-1);
 }
 
 /* Add styles here! */
+
+.max-width-wrapper {
+	max-width: 768px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.intro-chunk {
+	margin-top: var(--SP-7);
+	margin-bottom: var(--SP-6);
+	max-width: 35ch;
+}
+
+.intro-chunk p {
+	margin-bottom: 0;
+}
+
+.title {
+	font-size: var(--FS-3);
+	margin-bottom: var(--SP-4);
+}
+
+.card {
+	background-color: var(--C-Grey-100);
+	border-bottom: var(--SP-1) solid var(--C-Grey-300);
+	padding-top: var(--SP-1);
+	padding-bottom: var(--SP-2);
+}
+
+.card p {
+	margin: 0;
+	margin-top: var(--SP-2);
+}
+
+.indented-heading {
+	max-width: max-content;
+	font-size: var(--FS-2);
+	margin: 0 var(--SP-2) 0 calc(var(--SP-1) * -1);
+	padding: var(--SP-2) var(--SP-3);
+	background-color: var(--C-Secondary-lighter);
+	border-bottom: var(--SP-1) solid var(--C-Secondary-darker);
+}
+
+strong {
+	color: var(--C-Primary);
+}
+
+main {
+	padding-top: var(--SP-5);
+	padding-bottom: var(--SP-5);
+	background-color: var(--C-Grey-200);
+	border-top: var(--SP-1) solid var(--C-Grey-300);
+}
+
+.intro-chunk,
+.card p {
+	padding-left: var(--SP-2);
+	padding-right: var(--SP-2);
+}
